@@ -1,0 +1,47 @@
+.loading__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.loading__img {
+  width: 100%;
+  height: 250px;
+}
+
+.loading__title {
+  width: 80%;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.loading__title:last-child {
+  width: 60%;
+}
+
+.bg__animation {
+  background: linear-gradient(90deg, #ddd, #aaa, #ddd);
+  background-size: 200%;
+  animation: bgLoading 1s linear 0s infinite;
+}
+
+@keyframes bgLoading {
+  to {
+    background-position: 200%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .loading__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .loading__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+}
